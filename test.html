@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alok Kumar Jaiswal | Portfolio</title>
+    <!-- CSS File Connection -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for Aesthetic Look -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <a href="#home" class="logo">ALOK<span>.</span></a>
+
+        <div class="nav-links" id="navLinks">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#certifications">Achievements</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <div class="nav-actions">
+            <button id="themeBtn" class="theme-btn" title="Switch Pink Shade">🌸</button>
+            <button id="menuBtn" class="menu-btn" aria-label="Menu">☰</button>
+        </div>
+    </nav>
+</header>
+
+<!-- HOME SECTION -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <p class="small-title">WELCOME TO MY PORTFOLIO</p>
+
+        <h1>Hi, I'm <span>Alok Kumar Jaiswal</span></h1>
+
+        <h2 class="typing-line">
+            I'm a <span id="typing">AIML Student</span><span class="cursor">|</span>
+        </h2>
+
+        <p class="hero-desc">
+            I am pursuing B.Tech in Artificial Intelligence
+            and Machine Learning. I love programming,
+            technology and creating innovative projects.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#projects" class="btn">Explore My Work</a>
+            <a href="assets/Alok-CV.pdf" download class="btn secondary">Download CV</a>
+        </div>
+
+        <div class="hero-socials">
+            <a href="https://github.com/annujaiswal2255-rgb" target="_blank" rel="noopener">GitHub ↗</a>
+            <a href="https://www.linkedin.com/in/alok-jaiswal-2997a3443/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </div>
+    </div>
+
+    <div class="profile">
+        <div class="profile-card">
+            <div class="profile-img-wrapper">
+                <img src="me.png" alt="Alok Kumar Jaiswal" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="profile-fallback" style="display: none;">AKJ</div>
+            </div>
+            <h2>Alok Kumar Jaiswal</h2>
+            <p>AI/ML Student | Programmer</p>
+            <span class="status-badge">B.Tech CSE (AI & ML)</span>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="section">
+    <h2 class="heading">About <span>Me</span></h2>
+
+    <div class="about-box">
+        <p>
+            Hello! I am <strong>Alok Kumar Jaiswal</strong>, a second-year
+            B.Tech student specializing in Artificial Intelligence
+            and Machine Learning.
+        </p>
+        <p>
+            I am passionate about Artificial Intelligence,
+            Machine Learning, Web Development, Programming,
+            and modern technologies. My goal is to continuously sharpen my
+            technical skills and build impactful projects that solve real-world problems.
+        </p>
+    </div>
+</section>
+
+<!-- EDUCATION SECTION -->
+<section id="education" class="section">
+    <h2 class="heading">My <span>Education</span></h2>
+
+    <div class="education-grid">
+        <div class="card edu-card">
+            <span class="edu-year">2025 – Present (2nd Year)</span>
+            <h3>Bachelor of Technology (B.Tech)</h3>
+            <p class="edu-sub">Computer Science & Engineering (AI & ML)</p>
+            <p>Shri Ramswaroop Memorial University (SRMU), Barabanki</p>
+        </div>
+
+        <div class="card edu-card">
+            <span class="edu-year">Class 12th (2025)</span>
+            <h3>Higher Secondary Education (PCM)</h3>
+            <p class="edu-sub">Physics, Chemistry, Mathematics</p>
+            <button type="button" class="btn doc-btn" onclick="openMarksheet('12th marksheet.jpeg', 'Class 12th Marksheet')">
+                📄 View 12th Marksheet
+            </button>
+        </div>
+
+        <div class="card edu-card">
+            <span class="edu-year">Class 10th</span>
+            <h3>Secondary School Education</h3>
+            <p class="edu-sub">High School Certificate</p>
+            <button type="button" class="btn doc-btn" onclick="openMarksheet('10th marksheet.jpeg', 'Class 10th Marksheet')">
+                📄 View 10th Marksheet
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- MARKSHEET POPUP MODAL (Hidden until clicked) -->
+<div id="marksheetModal" class="modal" onclick="closeMarksheet(event)">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 id="modalTitle">Marksheet</h3>
+            <button type="button" class="close-modal" onclick="forceCloseModal()">✕</button>
+        </div>
+        <div class="modal-body">
+            <img id="modalImage" src="" alt="Marksheet Preview">
+        </div>
+    </div>
+</div>
+
+<!-- SKILLS SECTION -->
+<section id="skills" class="section">
+    <h2 class="heading">My <span>Skills</span></h2>
+
+    <div class="skills-container">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Java</div>
+        <div class="skill">Python</div>
+        <div class="skill">C Programming</div>
+        <div class="skill">Data Structures</div>
+        <div class="skill">DBMS</div>
+        <div class="skill">MySQL</div>
+        <div class="skill">Artificial Intelligence</div>
+        <div class="skill">Machine Learning</div>
+        <div class="skill">Git & GitHub</div>
+    </div>
+</section>
+
+<!-- PROJECTS SECTION -->
+<section id="projects" class="section">
+    <h2 class="heading">My <span>Projects</span></h2>
+
+    <div class="projects-container">
+
+        <div class="project-card">
+            <h3>Personal Portfolio</h3>
+            <p>A responsive personal portfolio website designed with aesthetic pink & white UI.</p>
+            <span class="tech-tag">HTML | CSS | JavaScript</span>
+            <a href="https://github.com/annujaiswal2255-rgb" target="_blank" rel="noopener">View on GitHub ↗</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Product Data Analysis</h3>
+            <p>Product database analysis and data visualization using Python libraries.</p>
+            <span class="tech-tag">Python | Pandas | Jupyter</span>
+            <a href="https://github.com/annujaiswal2255-rgb" target="_blank" rel="noopener">View on GitHub ↗</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Hash Functions</h3>
+            <p>Implementation of hashing algorithms and collision resolution techniques.</p>
+            <span class="tech-tag">Java | DSA</span>
+            <a href="https://github.com/annujaiswal2255-rgb" target="_blank" rel="noopener">View on GitHub ↗</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Statistics Project</h3>
+            <p>Probability distributions and statistical data analysis models.</p>
+            <span class="tech-tag">Statistics | Python</span>
+            <a href="https://github.com/annujaiswal2255-rgb" target="_blank" rel="noopener">View on GitHub ↗</a>
+        </div>
+
+        <div class="project-card">
+            <h3>AI/ML Projects</h3>
+            <p>Machine learning predictive models and upcoming Artificial Intelligence projects.</p>
+            <span class="tech-tag">Python | AI | ML</span>
+            <a href="https://github.com/annujaiswal2255-rgb" target="_blank" rel="noopener">View on GitHub ↗</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="section">
+    <h2 class="heading">Certificates & <span>Achievements</span></h2>
+
+    <div class="education-grid">
+        <div class="card">
+            <h3>Certifications</h3>
+            <p>Add your genuine certificates here (e.g., Python, AI/ML, Web Development).</p>
+        </div>
+
+        <div class="card">
+            <h3>Workshops & Internships</h3>
+            <p>Add your actual workshops, hackathons, and internship details here.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="section">
+    <h2 class="heading">Contact <span>Me</span></h2>
+
+    <div class="contact-wrapper">
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <input type="text" id="subject" placeholder="Subject" required>
+            <textarea id="message" placeholder="Your Message" required minlength="10"></textarea>
+
+            <button type="submit" class="btn">Prepare Email</button>
+            <p id="formMessage"></p>
+        </form>
+
+        <div class="social-links">
+            <a href="https://github.com/annujaiswal2255-rgb" target="_blank" rel="noopener" class="social-pill">GitHub Profile ↗</a>
+            <a href="https://www.linkedin.com/in/alok-jaiswal-2997a3443/" target="_blank" rel="noopener" class="social-pill">LinkedIn Profile ↗</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© <span id="year"></span> Alok Kumar Jaiswal | All Rights Reserved</p>
+</footer>
+
+<button id="topBtn" title="Back to top">↑</button>
+
+<!-- JAVASCRIPT FOR MODAL, TYPING & INTERACTIVITY -->
+<script>
+    // Dynamic Year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Mobile Menu Toggle
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+    menuBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll(".nav-links a").forEach(link => {
+        link.addEventListener("click", () => navLinks.classList.remove("active"));
+    });
+
+    // Soft Pink Shade Toggle (Blush White <-> Rose Soft)
+    const themeBtn = document.getElementById("themeBtn");
+    themeBtn.addEventListener("click", () => {
+        document.body.classList.toggle("rose-mode");
+        themeBtn.textContent = document.body.classList.contains("rose-mode") ? "🤍" : "🌸";
+    });
+
+    // Typing Animation
+    const roles = ["AIML Student", "Python Programmer", "Web Developer", "Tech Enthusiast"];
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typingEl = document.getElementById("typing");
+
+    function typeEffect() {
+        const currentRole = roles[roleIndex];
+        if (isDeleting) {
+            typingEl.textContent = currentRole.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            typingEl.textContent = currentRole.substring(0, charIndex + 1);
+            charIndex++;
+        }
+
+        let speed = isDeleting ? 60 : 110;
+        if (!isDeleting && charIndex === currentRole.length) {
+            speed = 1600;
+            isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            roleIndex = (roleIndex + 1) % roles.length;
+            speed = 400;
+        }
+        setTimeout(typeEffect, speed);
+    }
+    typeEffect();
+
+    // Marksheet Modal Functions
+    function openMarksheet(imageSrc, titleText) {
+        const modal = document.getElementById("marksheetModal");
+        const modalImg = document.getElementById("modalImage");
+        const modalTitle = document.getElementById("modalTitle");
+
+        modalTitle.textContent = titleText;
+        modalImg.src = imageSrc;
+        modal.classList.add("show");
+        document.body.style.overflow = "hidden";
+    }
+
+    function forceCloseModal() {
+        const modal = document.getElementById("marksheetModal");
+        modal.classList.remove("show");
+        document.body.style.overflow = "auto";
+    }
+
+    function closeMarksheet(event) {
+        if (event.target.id === "marksheetModal") {
+            forceCloseModal();
+        }
+    }
+
+    // Contact Form Handler
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const subject = document.getElementById("subject").value.trim();
+        const message = document.getElementById("message").value.trim();
+        const formMessage = document.getElementById("formMessage");
+
+        const mailtoLink = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\n" + message)}`;
+        formMessage.textContent = "Opening your email client...";
+        window.location.href = mailtoLink;
+    });
+
+    // Scroll to Top Button
+    const topBtn = document.getElementById("topBtn");
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            topBtn.classList.add("visible");
+        } else {
+            topBtn.classList.remove("visible");
+        }
+    });
+
+    topBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+</script>
+
+</body>
+</html>
